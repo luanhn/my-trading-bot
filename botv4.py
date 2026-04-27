@@ -5,7 +5,7 @@ st.set_page_config(page_title="Gold Grid V4 Realtime", layout="wide")
 
 # Kết nối với Google Sheets
 conn = st.connection("gsheets", type=GSheetsConnection)
-df = conn.read(spreadsheet="https://docs.google.com/spreadsheets/d/1q1TTEZ6mXP4lB9pCv8090JwkvSTNopQmVCDtFo_ByCk/edit?gid=0#gid=0")
+df = conn.read(spreadsheet="https://docs.google.com/spreadsheets/d/1q1TTEZ6mXP4lB9pCv8090JwkvSTNopQmVCDtFo_ByCk/edit?gid=0#gid=0",ttl=0)
 
 # Lấy dòng mới nhất
 if not df.empty:
